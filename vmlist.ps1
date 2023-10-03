@@ -9,7 +9,7 @@ $VMs = Get-VM
 
 # Loop through all VMs
 foreach ($VM in $VMs) {
-    $VM | Select-Object Name, @{N="Network"; E={$_.NetworkAdapters[0].NetworkName}}, @{N="MAC"; E={$_.NetworkAdapters[0].MacAddress}}, @{N="IP"; E={$_.Guest.IPAddress}}
+    $VM | Select-Object Name, @{N="Network"; E={$_.NetworkAdapters[0].NetworkName}}, @{N="Mac address"; E={$_.NetworkAdapters[0].MacAddress}}, @{N="IP Address"; E={$_.Guest.IPAddress}}
 }
 
 # EOF
